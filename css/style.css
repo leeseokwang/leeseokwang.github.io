@@ -1,0 +1,471 @@
+@charset "utf-8";
+
+#navi{
+    position: fixed;
+    width: 100%;
+    height: 8rem;
+    background-color: lightsteelblue;
+    color: #333;
+    z-index: 9999;
+    transition: all 1s;
+}
+#navi > div {
+    position: relative;
+    height: 100%;
+}
+#navi > div > ul {
+    display: flex;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    flex-flow: row nowrap;
+}
+#navi > div > ul > li {
+    font-size: 2rem;
+    margin-left: 4rem;
+}
+#navi > div > ul > li > a{
+    display: block;
+    padding: 0px 3rem;
+    position: relative;
+}
+main {
+    width: 100%;
+    /* 네비게이션 8rem 만큼 빼줌 */
+    height: 136rem;
+    /* height: 108rem; */
+    background-color: lightcyan;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+.ocean { 
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #015871;
+    opacity: 0.5;
+}
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}  
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}  
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}  
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}
+.border{width: 0;
+    position: absolute;
+    left:(50%);
+    bottom: 1.5rem;
+    height: 0.3rem;
+    background-color: #000;
+    transition: all 1s;
+}
+.T_right{bottom:-8px; left:50%;}
+.T_left{bottom:-8px; right:50%;}
+#navi > div > ul > li a:hover .border{
+    width: 30px;
+}
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#main > #text {
+    text-align: center;
+    width: 100%;
+}
+#main > #text > h3 {
+    /* font-size: 10rem; */
+    /* line-height: 1; */
+    margin-bottom: 5vw;
+    --duration: 1200ms;
+    --text-shadow-color: hsl(0 0% 100%);
+    
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: min(10vw, 10rem);
+    text-transform: uppercase;
+    text-shadow: 
+      0.006em -0.006em 0 var(--text-shadow-color),
+      0.012em -0.012em 0 var(--text-shadow-color),
+      0.018em -0.018em 0 var(--text-shadow-color),
+      0.024em -0.024em 0 var(--text-shadow-color),
+      0.030em -0.030em 0 var(--text-shadow-color),
+      0.006em  0       0 currentcolor,
+      0.012em -0.006em 0 currentcolor,
+      0.018em -0.012em 0 currentcolor,
+      0.024em -0.018em 0 currentcolor,
+      0.030em -0.024em 0 currentcolor,
+      0.036em -0.030em 0 currentcolor,
+      0.036em -0.036em 0 currentcolor;
+    perspective: 3em;
+    transform-origin: bottom center;
+    transform-style: preserve-3d;
+    animation: movement var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+#main > #text > h3::after {
+--transform: scaleY(-1) translateY(-30%) rotateX(-35deg) scaleY(1.2) translateY(calc(-30% + 2px));
+--transform-alt: scaleY(-1) translateY(-30%) rotateX(-55deg) scaleY(1.4) translateY(calc(-30% + 2px));
+
+content: 'LEE SEO KWANG' / '';
+display: block;
+position: absolute;
+top: 2.5rem;
+left: 0;
+text-shadow: initial;
+-webkit-mask-image:
+    linear-gradient(
+    to bottom,
+    hsla(0 0% 0% / 0) 0%,
+    hsla(0 0% 0% / 0.006) 13.7%,
+    hsla(0 0% 0% / 0.022) 25.4%,
+    hsla(0 0% 0% / 0.049) 35.3%,
+    hsla(0 0% 0% / 0.086) 43.6%,
+    hsla(0 0% 0% / 0.133) 50.6%,
+    hsla(0 0% 0% / 0.188) 56.5%,
+    hsla(0 0% 0% / 0.251) 61.6%,
+    hsla(0 0% 0% / 0.323) 66%,
+    hsla(0 0% 0% / 0.402) 70.1%,
+    hsla(0 0% 0% / 0.487) 74.1%,
+    hsla(0 0% 0% / 0.579) 78.1%,
+    hsla(0 0% 0% / 0.677) 82.5%,
+    hsla(0 0% 0% / 0.780) 87.4%,
+    hsla(0 0% 0% / 0.888) 93.2%,
+    hsla(0 0% 0% / 1) 100%
+);
+opacity: 0.6;
+transform: var(--transform);
+animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+@keyframes movement {
+    20% { transform: scaleY(1.4) skew(10deg)  }
+    50% { transform: scaleY(1)   skew(0)      }
+    70% { transform: scaleY(1.4) skew(-10deg) }
+}
+@keyframes shadow {
+    20% { transform: var(--transform-alt) }
+    50% { transform: var(--transform)     }
+    70% { transform: var(--transform-alt) }
+}
+@keyframes rotate {
+    to { transform: rotate(1turn) }
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+    }
+}
+#main > #text > p {
+    font-size: 3rem;
+    line-height: 3;
+}
+#main > #text > #git_btn {
+    margin: 0 auto;
+    font-size: 2rem;
+    /* padding: 20px; */
+    border: solid 2px lightcoral;
+    border-radius: 0.7rem;
+    width: 13rem;
+    height: 6rem;
+    text-align: center;
+}
+#main > #text > #git_btn > div {
+    width: 13rem;
+    height: 6rem;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    /* background-color: khaki; */
+}
+#main > #text > #git_btn > div > img {
+    width: 2rem;
+}
+#main > #text > #git_btn:hover{
+    background-color: #aaa;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#page1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    /* width: 256rem; */
+    /* height: 144rem; */
+    /* height: 108rem; */
+    background-color: #70abb8;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.ocean2 { 
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background: #005871;
+    opacity: 0.5;
+}
+.wave2 {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave2 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}  
+.wave2:nth-of-type(2) {
+    top: -175px;
+    animation: wave2 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell2 7s ease -1.25s infinite;
+    opacity: 1;
+}  
+@keyframes wave2 {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}  
+@keyframes swell2 {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}
+#page1 *{
+    -webkit-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
+}
+#page1 > #portfolio1 {
+    display: flex;
+    flex-flow: row wrap;
+    /* position: absolute; */
+    /* top: 5%; */
+    width: 85%;
+    /* height: 42.5%; */
+    margin: 10rem auto;
+    background-color: black;
+    overflow: hidden;
+}
+#page1 .pf_img {
+    width: 50%;
+    height: 23.72vw;
+    position: relative;
+    background-color: none;
+    overflow: hidden;
+}
+#page1 > #portfolio1 > .pf_img > a > img {
+    width: 100%;
+}
+#page1 > #portfolio1 > .pf_img > a:hover > img{
+    opacity: 0.1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#page1 > #portfolio1 > .pf_img > a > .caption{
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    right: 7%;
+    bottom: 45%;
+    border: 0.1vw solid white;
+    opacity: 0;
+}
+#page1 > #portfolio1 > .pf_img > a > .caption > p{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    padding: 0 2vw;
+    margin: 0;
+    /* opacity: 0; */
+    line-height: 3vw;
+    font-size: 1.5vw;
+    color: #aaa;
+}
+#page1 > #portfolio1 > .pf_img > a > .caption > p strong {
+    color: #ccc;
+    font-weight: bold;
+}
+#page1 > #portfolio1 > .pf_img > a:hover > .caption {
+    top: 7%;
+    bottom: 7%;
+    opacity: 1;
+}
+#page1 .pf_txt {
+    width: 50%;
+    height: 23.72vw;
+    background-color: #212529;
+    text-align: left;
+}
+#page1 .pf_txt > div{
+    margin: 4vw 5vw;
+}
+#page1 .pf_txt h3 {
+    font: bold 2.5vw/5vw NanumGothic, sans-serif;
+    margin-bottom: 1vw;
+    color: #fff;
+}
+#page1 > #portfolio1 > .pf_txt hr {
+    margin-bottom: 0.5vw;
+    border: 0;
+    border-top: 0.3vw solid;
+    margin-left: 0;
+    margin-top: 1vw;
+    width: 8vw;
+    color: cornflowerblue;
+}
+#page1 .pf_txt p {
+    font: 1vw/2vw NanumGothic, sans-serif;
+    color: #ccc;
+}
+.view_btn{
+    font: 1vw/2vw NanumGothic, sans-serif;
+    border: 0.1vw solid #828282;
+    display: inline-block;
+    margin-top: 1vw;
+    padding: 0.3vw 0.5vw 0.4vw;
+    border-radius: 0.2vw;
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    font-weight: 200;
+}
+.view_btn:hover{
+    border-color:#F59112;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+#page1 > #portfolio2 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 85%;
+    margin: 0 auto  10rem;
+    background-color: black;
+    overflow: hidden;
+    z-index: 1;
+}
+#page1 > #portfolio2 > .pf_img > a > img {
+    width: 100%;
+}
+#page1 > #portfolio2 > .pf_img > a:hover > img{
+    opacity: 0.1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#page1 > #portfolio2 > .pf_img > a > .caption{
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    right: 7%;
+    bottom: 45%;
+    border: 0.1vw solid white;
+    opacity: 0;
+}
+#page1 > #portfolio2 > .pf_img > a > .caption > p{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100%;
+    padding: 0 2vw;
+    margin: 0;
+    /* opacity: 0; */
+    line-height: 3vw;
+    font-size: 1.5vw;
+    color: #aaa;
+}
+#page1 > #portfolio2 > .pf_img > a > .caption > p strong {
+    color: #ccc;
+    font-weight: bold;
+}
+#page1 > #portfolio2 > .pf_img > a:hover > .caption {
+    top: 7%;
+    bottom: 7%;
+    opacity: 1;
+}
+#page1 > #portfolio2 > .pf_txt {
+    text-align: right;
+}
+#page1 > #portfolio2 > .pf_txt hr {
+    margin-bottom: 0.5vw;
+    border: 0;
+    border-top: 0.3vw solid;
+    margin-right: 0;
+    margin-top: 1vw;
+    width: 8vw;
+    color: cornflowerblue;
+}
+#page2 {
+    width: 100%;
+    background-color: #212529;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+#page2 > .size {
+    display: inline-block;
+    width: 100%;
+    padding: 5vw 10vw;
+    max-width: 70vw;
+}
+#page2 > .size > h3 {
+    color: white;
+    font-size: 2.5vw;
+}
+#page2 > .size > div{
+    margin-top: 3vw;
+}
+#page2 > .size > div > p {
+    color: #ddd;
+    font-size: 1.5vw;
+    text-align: left;
+}
+#page2 > .size > div > div {
+    margin-top: 1vw;
+    height: 2.3vw;
+}
+#page2 > .size > div > div > div {
+    font-size: 1.5vw;
+    line-height: 2.3vw;
+}
