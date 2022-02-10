@@ -23,7 +23,8 @@ window.addEventListener('scroll', function() {
 });
 
 var topV = $('#page2').offset().top;
-$(window).scroll(function () {
+
+window.addEventListener('scroll', function() {
     var winSt = $(window).scrollTop();
     // console.log(topV - winSt);
     if (topV - winSt < 746) {
