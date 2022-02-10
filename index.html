@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이서광의 포트폴리오</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav id='navi'>
+        <div>
+            <ul>
+                <li>
+                    <a id="main-btn" href="#main">
+                        Main
+                        <span class="border T_right"></span>
+                        <span class="border T_left"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="work-btn" href="#page1">
+                        Work
+                        <span class="border T_right"></span>
+                        <span class="border T_left"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="skill-btn" href="">
+                        Skill
+                        <span class="border T_right"></span>
+                        <span class="border T_left"></span>
+                    </a>
+                </li>
+                <li>
+                    <a id="contact-btn" href="">
+                        Contact
+                        <span class="border T_right"></span>
+                        <span class="border T_left"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div id='main'>
+            <div id='text'>
+                <h3>LEE SEO KWANG</h3>
+                <p>PORTFOLIO</p>
+                <div id ='git_btn' onclick="git_btn()">
+                    <div>
+                        <img src="./img/git_icon.png" alt="icon">
+                        GitHub
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id='page1'>        
+        <div class="ocean2">
+            <div class="wave2"></div>
+            <div class="wave2"></div>
+        </div>
+        <div id='portfolio1' class='pf_page'>
+            <div class='pf_img'>
+                <a href="https://github.com/leeseokwang" target="_black">
+                    <img src="./img/project1.png" alt="자바프로젝트">
+                    <div class="d-lg-block caption">
+                        <p>
+                            저를 포함한 4명의 조원들과 기획부터 개발까지,<br>
+                            JAVA와 SQL Developer를 연동하여 만든<br>
+                            JAVA GUI : 스터디카페 키오스크입니다.<br><br>
+                            &lt; <strong>클릭!</strong>하면 깃허브로 이동합니다. &gt;
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class='pf_txt'>
+                <div>
+                    <h3>JAVA PROJECT</h3>
+                    <p>
+                        기획 / 설계 / 개발 100% [제작기간 3주일]
+                        <a href=""></a>
+                    </p>
+                    <hr>
+                    <a href="https://github.com/leeseokwang" target="_blank" class="view_btn">view site</a>
+                </div>       
+            </div>
+        </div>
+        <div id='portfolio2' class='pf_page'>
+            <div class='pf_txt'>
+                <div>
+                    <h3>JAVA PROJECT</h3>
+                    <p>
+                        기획 / 설계 / 개발 100% [제작기간 3주일]
+                    </p>
+                    <hr>
+                    <a href="https://github.com/leeseokwang" target="_blank" class="view_btn">view site</a>
+                </div>       
+            </div>
+            <div class='pf_img'>
+                <a href="https://github.com/leeseokwang" target="_black">
+                    <img src="./img/project1.png" alt="자바프로젝트">
+                    <div class="d-lg-block caption">
+                        <p>
+                            저를 포함한 4명의 조원들과 기획부터 개발까지,<br>
+                            JAVA와 SQL Developer를 연동하여 만든<br>
+                            JAVA GUI : 스터디카페 키오스크입니다.<br><br>
+                            &lt; <strong>클릭!</strong>하면 깃허브로 이동합니다. &gt;
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="page2">
+        <div id="skill" class="size">
+            <!-- <div> -->
+            <h3>My Skills</h3>
+            <div>
+                <p>HTML / CSS</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info h-c-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                        <span class="sr-only">79.9%</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>JavaScript</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info js-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                        <span class="sr-only">67.0%</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>JAVA</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info java-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                        <span class="sr-only">84.0%</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>SQL</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info sql-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                        <span class="sr-only">85.0%</span>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script src="./js/js01.js"></script>
+</body>
+</html>
