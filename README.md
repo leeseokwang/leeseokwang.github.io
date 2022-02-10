@@ -1,1 +1,0 @@
-# seokwang.github.io
