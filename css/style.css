@@ -468,10 +468,13 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
 #page2 > .size > div > div {
     margin-top: 1vw;
     height: 2.3vw;
+    border-radius: 0.5vw;
 }
 #page2 > .size > div > div > div {
     font-size: 1.5vw;
     line-height: 2.3vw;
+    border-top-left-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
 }
 #page3 {
     width: 100%;
@@ -495,4 +498,15 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
 #page3 > .size > p {
     font-size: 1.2vw;
     color: #aaa;
+}
+#page3 #info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column wrap;
+    
+}
+#page3 #info > div {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
 }
