@@ -476,6 +476,8 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     border-top-left-radius: 0.5vw;
     border-bottom-left-radius: 0.5vw;
 }
+
+
 #page3 {
     width: 100%;
     background-color: #010b1c;
@@ -491,22 +493,61 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 #page3 > .size > h3 {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.7vw;
     color: #eee;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
 }
 #page3 > .size > p {
-    font-size: 1.2vw;
+    font-size: 1vw;
     color: #aaa;
+    margin-bottom: 3vw;
+}
+#page3 > .size > p:nth-of-type(2){
+    margin-bottom: 0;
+}
+.ri-send-plane-fill {
+    font-size: 5vw;
+    color: lightcyan;
 }
 #page3 #info {
     display: flex;
     justify-content: center;
     flex-direction: column wrap;
-    
+    align-items: center;
 }
 #page3 #info > div {
+    display: flex;
     background-color: #fff;
-    width: 100px;
-    height: 100px;
+    width: 18vw;
+    height: 25vw;
+    margin-bottom: 5vw;
+    margin-left: 4vw;
+    border-bottom: 0.7vw solid #5bc0de;
+    border-radius: 0.35vw;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#page3 #info > div:nth-of-type(3) {
+    margin-right: 4vw;
+}
+#page3 #info > div > div > p:nth-of-type(1) {
+    font-size: 3vw;
+    margin: 0 auto 3vw;
+    color: #2cb2db;
+}
+#page3 #info > div > div > h3 {
+    font-size: 1vw;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+    color: #000;
+    margin-bottom: 1.8vw;
+}
+#page3 #info > div > div > hr {
+    width: 3vw;
+    border-top: 0.3vw solid #5bc0de;
+    margin-bottom: 1.5vw;
+}
+#page3 #info > div > div > p {
+    font-size: 0.7vw;
 }

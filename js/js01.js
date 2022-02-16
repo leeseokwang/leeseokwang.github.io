@@ -35,10 +35,13 @@ window.addEventListener('scroll', function() {
             'width': 67 + '%'
         }, 2680);
         $('.java-bar').delay(300).animate({
-            'width': 84 + '%'
-        }, 3360);
+            'width': 83 + '%'
+        }, 3320);
         $('.sql-bar').delay(300).animate({
-            'width': 85 + '%'
-        }, 3400);
+            'width': 87 + '%'
+        }, 3480);
+        $('.spring-bar').delay(300).animate({
+            'width': 80 + '%'
+        }, 3200);
     }
 });
