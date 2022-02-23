@@ -23,11 +23,11 @@ window.addEventListener('scroll', function() {
 });
 
 var topV = $('#page2').offset().top;
-
 window.addEventListener('scroll', function() {
     var winSt = $(window).scrollTop();
-    // console.log(topV - winSt);
-    if (topV - winSt < 746) {
+    // console.log("topV : "+topV);
+    // console.log("winSt : "+winSt);
+    if (topV - winSt < 500) {
         $('.h-c-bar').delay(300).animate({
             'width': 79.9 + '%'
         }, 3200);
