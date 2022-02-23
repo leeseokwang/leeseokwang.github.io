@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+html{
+    scroll-behavior:smooth;
+}
 #navi{
     position: fixed;
     width: 100%;
@@ -226,11 +228,7 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     display: flex;
     flex-flow: column;
     align-items: center;
-    /* justify-content: center; */
     width: 100%;
-    /* width: 256rem; */
-    /* height: 144rem; */
-    /* height: 108rem; */
     background-color: #70abb8;
     overflow: hidden;
     text-align: center;
@@ -282,10 +280,7 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
 #page1 > #portfolio1 {
     display: flex;
     flex-flow: row wrap;
-    /* position: absolute; */
-    /* top: 5%; */
     width: 85%;
-    /* height: 42.5%; */
     margin: 10rem auto;
     background-color: black;
     overflow: hidden;
@@ -322,7 +317,6 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     width: 100%;
     padding: 0 2vw;
     margin: 0;
-    /* opacity: 0; */
     line-height: 3vw;
     font-size: 1.5vw;
     color: #aaa;
@@ -414,7 +408,6 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     width: 100%;
     padding: 0 2vw;
     margin: 0;
-    /* opacity: 0; */
     line-height: 3vw;
     font-size: 1.5vw;
     color: #aaa;
@@ -476,8 +469,6 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     border-top-left-radius: 0.5vw;
     border-bottom-left-radius: 0.5vw;
 }
-
-
 #page3 {
     width: 100%;
     background-color: #010b1c;
@@ -550,4 +541,151 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }
 #page3 #info > div > div > p {
     font-size: 0.7vw;
+}
+
+
+@media (max-width: 700px) {
+    #navi{
+        height: 8vw;
+    }
+    #navi > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #navi > div > ul {
+        right: auto;
+        top: auto;
+    }
+    #navi > div > ul > li {
+        font-size: 3vw;
+        margin-left: 2rem;
+    }
+    #navi > div > ul > li:nth-of-type(1) {
+        margin-left: 0rem;
+    }
+    #navi > div > ul > li > a{
+        padding: 0px 3rem;
+    }
+    main {
+        height: 120vw;
+    }
+    #page1 > #portfolio1 {
+        width: 70%;
+    }
+    #page1 .pf_img {
+        height: 38.4vw;
+        width: 100%;
+    }
+    #page1 > #portfolio1 > .pf_img > a > .caption > p{
+        line-height: 5vw;
+        font-size: 2.5vw;
+    }
+    #page1 .pf_txt {
+        width: 100%;
+        height: 38.4vw;
+        text-align: left;
+    }
+    #page1 .pf_txt h3 {
+        font: bold 6vw/12vw NanumGothic, sans-serif;
+        margin-bottom: 0vw;
+    }
+    #page1 > #portfolio1 > .pf_txt hr {
+        width: 16vw;
+        border: 0;
+        border-top: 0.6vw solid;
+        margin-top: 3vw;
+        margin-bottom: 1.5vw;
+    }
+    #page1 .pf_txt p {
+        font: 2vw/2vw NanumGothic, sans-serif;
+    }
+    .view_btn{
+        font: 2.5vw/2.5vw NanumGothic, sans-serif;
+        border: 0.3vw solid #828282;
+        margin-top: 1.8vw;
+        padding: 1.5vw 2vw;
+        border-radius: 0.8vw;
+    }
+    #page1 > #portfolio2 {
+        width: 70%;
+        flex-flow: column-reverse wrap;
+    }
+    #page1 > #portfolio2 > .pf_img > a > .caption > p{
+        line-height: 5vw;
+        font-size: 2.5vw;
+    }
+    #page1 > #portfolio2 > .pf_txt hr {
+        width: 16vw;
+        border: 0;
+        border-top: 0.6vw solid;
+        margin-top: 3vw;
+        margin-bottom: 1.5vw;
+    }
+    #page2 {
+        width: 100%;
+        background-color: #212529;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+    }
+    #page2 > .size {
+        max-width: 90vw;
+        padding: 15vw 10vw;
+    }
+    #page2 > .size > h3 {
+        font: bold 7vw/10vw NanumGothic, sans-serif;
+    }
+    #page2 > .size > div{
+        margin-top: 6vw;
+    }
+    #page2 > .size > div > p {
+        font-size: 3.5vw;
+        margin-bottom: 2.5vw;
+    }
+    #page2 > .size > div > div {
+        height: 3.5vw;
+    }
+    #page2 > .size > div > div > div {
+        line-height: 3.5vw;
+    }
+    #page3 > .size {
+        padding: 10vw 10vw;
+        max-width: 100vw;
+    }
+    #page3 > .size > h3 {
+        font-size: 4vw;
+        margin-bottom: 4vw;
+        margin-top: 8vw;
+    }
+    #page3 > .size > p {
+        font-size: 2.4vw;
+    }
+    .ri-send-plane-fill {
+        font-size: 8vw;
+    }
+    #page3 #info {
+        margin-bottom: 6vw;
+    }
+    #page3 #info > div {
+        width: 28vw;
+        height: 40vw;
+    }
+    #page3 #info > div > div > p:nth-of-type(1) {
+        font-size: 6vw;
+        margin: 0 auto 5vw;
+    }
+    #page3 #info > div > div > h3 {
+        font-size: 2.5vw;
+        letter-spacing: 0.2vw;
+        margin-bottom: 3vw;
+    }
+    #page3 #info > div > div > hr {
+        width: 6vw;
+        border-top: 0.6vw solid #5bc0de;
+        margin-bottom: 3vw;
+    }
+    #page3 #info > div > div > p {
+        font-size: 2vw;;
+    }
 }
