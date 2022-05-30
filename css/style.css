@@ -374,7 +374,8 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     background-color: rgba(255, 255, 255, 0.1);
     transition: 0.5s;
 }
-#page1 > #portfolio2 {
+#page1 > #portfolio2,
+#page1 > #portfolio3 {
     display: flex;
     flex-flow: row wrap;
     width: 85%;
@@ -383,15 +384,18 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     overflow: hidden;
     z-index: 1;
 }
-#page1 > #portfolio2 > .pf_img > a > img {
+#page1 > #portfolio2 > .pf_img > a > img,
+#page1 > #portfolio3 > .pf_img > a > img {
     width: 100%;
 }
-#page1 > #portfolio2 > .pf_img > a:hover > img{
+#page1 > #portfolio2 > .pf_img > a:hover > img,
+#page1 > #portfolio3 > .pf_img > a:hover > img {
     opacity: 0.1;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-#page1 > #portfolio2 > .pf_img > a > .caption{
+#page1 > #portfolio2 > .pf_img > a > .caption,
+#page1 > #portfolio3 > .pf_img > a > .caption {
     position: absolute;
     top: 45%;
     left: 7%;
@@ -400,7 +404,8 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     border: 0.1vw solid white;
     opacity: 0;
 }
-#page1 > #portfolio2 > .pf_img > a > .caption > p{
+#page1 > #portfolio2 > .pf_img > a > .caption > p,
+#page1 > #portfolio3 > .pf_img > a > .caption > p {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -412,11 +417,13 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     font-size: 1.5vw;
     color: #aaa;
 }
-#page1 > #portfolio2 > .pf_img > a > .caption > p strong {
+#page1 > #portfolio2 > .pf_img > a > .caption > p strong,
+#page1 > #portfolio3 > .pf_img > a > .caption > p strong {
     color: #ccc;
     font-weight: bold;
 }
-#page1 > #portfolio2 > .pf_img > a:hover > .caption {
+#page1 > #portfolio2 > .pf_img > a:hover > .caption,
+#page1 > #portfolio3 > .pf_img > a:hover > .caption {
     top: 7%;
     bottom: 7%;
     opacity: 1;
@@ -424,7 +431,11 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
 #page1 > #portfolio2 > .pf_txt {
     text-align: right;
 }
-#page1 > #portfolio2 > .pf_txt hr {
+#page1 > #portfolio3 > .pf_txt {
+    text-align: left;
+}
+#page1 > #portfolio2 > .pf_txt hr,
+#page1 > #portfolio3 > .pf_txt hr {
     margin-bottom: 0.5vw;
     border: 0;
     border-top: 0.3vw solid;
@@ -432,6 +443,9 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
     margin-top: 1vw;
     width: 8vw;
     color: cornflowerblue;
+}
+#page1 > #portfolio3 > .pf_txt hr {
+    margin-left: 0;
 }
 #page2 {
     width: 100%;
@@ -607,15 +621,18 @@ animation: shadow var(--duration) cubic-bezier(0.65, 0, 0.35, 1) infinite;
         padding: 1.5vw 2vw;
         border-radius: 0.8vw;
     }
-    #page1 > #portfolio2 {
+    #page1 > #portfolio2,
+    #page1 > #portfolio3 {
         width: 70%;
         flex-flow: column-reverse wrap;
     }
-    #page1 > #portfolio2 > .pf_img > a > .caption > p{
+    #page1 > #portfolio2 > .pf_img > a > .caption > p,
+    #page1 > #portfolio3 > .pf_img > a > .caption > p {
         line-height: 5vw;
         font-size: 2.5vw;
     }
-    #page1 > #portfolio2 > .pf_txt hr {
+    #page1 > #portfolio2 > .pf_txt hr,
+    #page1 > #portfolio3 > .pf_txt hr {
         width: 16vw;
         border: 0;
         border-top: 0.6vw solid;

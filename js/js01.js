@@ -32,7 +32,10 @@ window.addEventListener('scroll', function() {
             'width': 79.9 + '%'
         }, 3200);
         $('.js-bar').delay(300).animate({
-            'width': 67 + '%'
+            'width': 74 + '%'
+        }, 2680);
+        $('.react-bar').delay(300).animate({
+            'width': 77 + '%'
         }, 2680);
         $('.java-bar').delay(300).animate({
             'width': 83 + '%'
